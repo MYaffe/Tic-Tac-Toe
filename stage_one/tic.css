@@ -1,0 +1,23 @@
+.wrap{
+  margin:0 auto;
+  width:430px;
+  height:420px;
+  background-color:grey;
+    z-index: -1;
+
+}
+
+.tiles{
+  height:125px;
+  width:125px;
+  background: #59D1DE;
+  margin:5px;
+  display: inline-flex;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 150px;
+}
+p{
+  font-size:; 
+  margin:50px;
+}
