@@ -13,28 +13,7 @@ var $9 = $('#9');
 var player = 'X';
 
 function togglePlayer() {
-  player = player === 'X' ? 'O' : 'X';
-}
-
-function checkForWinner() {
-  var winner;
-  console.log('checkForWinner');
-  var first = $('#1').html();
-  if (first) {
-    if (first === $('#2').html() && first === $('#3').html()) {
-      winner = first;
-    }
-  }
-  else {
-    console.log('first is falsey');
-  }
-  if (winner) {
-    console.log('Found a winner: ' + first);
-    $('.congratulate').html(first + ' is the winner' );
-  }
-  else {
-    console.log('No winner found');
-  }
+  player = player === 'X' : 'O' : 'X';
 }
 
 $('#turns').html(player);
@@ -45,6 +24,20 @@ $('.tiles').click(function() {
   togglePlayer();
   $('#turns').html(player);
 });
+
+
+function checkForWinner() {
+  console.log('checkForWinner');
+  var first = $('#1').html();
+  if (first) {
+    if (first === $('#2').html() && first === $('#3').html()) {
+      $('.congratulate').html(first + ' is the winner' );
+    }
+  }
+  else {
+    console.log('first is falsey');
+  }
+}
 
 $('#new').click(function(){
   $('.tiles').html('');
