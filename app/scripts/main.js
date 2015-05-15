@@ -13,7 +13,7 @@ var $9 = $('#9');
 var player = 'X';
 
 function togglePlayer() {
-  player = player === 'X' : 'O' : 'X';
+  player = player === 'X' ? 'O' : 'X';
 }
 
 $('#turns').html(player);
@@ -29,11 +29,13 @@ $('.tiles').click(function() {
 function checkForWinner() {
   console.log('checkForWinner');
   var first = $('#1').html();
-  if (first) {
     if (first === $('#2').html() && first === $('#3').html()) {
+      if (first !== ""){
       $('.congratulate').html(first + ' is the winner' );
+      console.log('you win')
     }
   }
+
   else {
     console.log('first is falsey');
   }
