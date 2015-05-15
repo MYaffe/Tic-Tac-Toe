@@ -1,13 +1,12 @@
-var $1 = $('#1');
-var $2 = $('#2');
-var $3 = $('#3');
-var $4 = $('#4');
-var $5 = $('#5');
-var $6 = $('#6');
-var $7 = $('#7');
-var $8 = $('#8');
-var $9 = $('#9');
-
+var one = $('#1');
+var two = $('#2');
+var three = $('#3');
+var four = $('#4');
+var five = $('#5');
+var six = $('#6');
+var seven = $('#7');
+var eight = $('#8');
+var nine = $('#9');
 
 
 var player = 'X';
@@ -17,30 +16,69 @@ function togglePlayer() {
 }
 
 $('#turns').html(player);
-
-$('.tiles').click(function() {
-  $(this).html(player);
+$('.btn').click(function() {
+ $(this).html(player)
+  if (this==one){
+    (one).html(player)
+  }
+  if (this==two){
+    (two).html(player)
+  } 
+  if (this==three){
+    (three).html(player)
+  }
+   if (this==four){
+    (four).html(player)
+  }
+   if (this==five){
+    (five).html(player)
+  }
+   if (this==six){
+    (six).html(player)
+  }
+   if (this==seven){
+    (seven).html(player)
+  }
+   if (this==eight){
+    (eight).html(player)
+  }
+   if (this==nine){
+    (nine).html(player)
+  }
   checkForWinner();
+console.log(one.html());
+console.log(two.html());
+console.log(three.html());
+
   togglePlayer();
+
   $('#turns').html(player);
 });
 
 
+
 function checkForWinner() {
-  console.log('checkForWinner');
-  var first = $('#1').html();
-    if (first === $('#2').html() && first === $('#3').html()) {
-      if (first !== ""){
-      $('.congratulate').html(first + ' is the winner' );
-      console.log('you win')
+      if((one.html() === two.html() && two.html() === three.html() && one.html() !== "")||
+         (four.html() === five.html() && five.html() === six.html() && four.html() !== "")||
+         (seven.html() === eight.html() && eight.html() === nine.html() && seven.html() !== "")||
+         (one.html() === four.html() && four.html() === seven.html() && one.html() !== "")||
+         (two.html() === five.html() && five.html() === eight.html() && two.html() !== "")||
+         (three.html() === six.html() && six.html() === nine.html() && three.html() !== "")||
+         (one.html() === five.html() && five.html() === nine.html() && one.html() !== "")||
+         (three.html() === five.html() && five.html() === seven.html() && three.html() !== "") 
+        )
+
+{
+      $('.congratulate').html(player + ' is the winner' );
+      console.log('you win');
     }
-  }
+  
 
   else {
-    console.log('first is falsey');
-  }
-}
+    console.log('falsey');
+  }}
+
 
 $('#new').click(function(){
-  $('.tiles').html('');
+  $('.btn').html('');
 });

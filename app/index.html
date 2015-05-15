@@ -21,42 +21,26 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">tic tac toe</h3>
-      </div>
-
-      <div class="jumbotron">
-      
-      </div>
-<body>
-   <div class='container'>
-     <body>
-     <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-  <div class="flipper">
-    <div class="front">
-      <!-- front content -->
-   <div col-xs-12>
-  <div id= "1" class="tiles"></div>
-  <div id= "2" class="tiles"></div>
-  <div id= "3" class="tiles"></div> 
+<div class="game-container text-center" style="padding-left: 10px;">
+    <div class="row-fluid game">
+        <div class="span3 sq btn" id="1"></div>
+        <div class="span3 sq btn" id="2"></div>
+        <div class="span3 sq btn" id="3"></div>
     </div>
-      <div col-xs-12>
-  <div id= "4" class="tiles"></div> 
-  <div id= "5" class="tiles"></div> 
-  <div id= "6" class="tiles"></div>
+    <div class="row-fluid game">
+        <div class="span3 sq btn" id="4"></div>
+        <div class="span3 sq btn" id="5"></div>
+        <div class="span3 sq btn" id="6"></div>
     </div>
-      <div col-xs-12>
-   <div id= "7"  class="tiles"></div> 
-  <div id= "8" class="tiles"></div> 
-  <div id= "9" class="tiles"></div>
-      </div>
+    <div class="row-fluid game">
+        <div class="span3 sq btn" id="7"></div>
+        <div class="span3 sq btn" id="8"></div>
+        <div class="span3 sq btn" id="9"></div>
+    </div>
+  </div>
+    
+
+
 
        
        <div class="Congratulate">
@@ -65,7 +49,7 @@
 
         <div class='footer'>
        <button id='new'>New</button>
-       &nbsp;Turn: <span id='turns'></span> 
+       ;Turn: <span id='turns'></span> 
      </div>
   </body>
       
