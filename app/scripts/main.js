@@ -8,17 +8,8 @@ var seven = $('#7');
 var eight = $('#8');
 var nine = $('#9');
 
-
-var player = 'X';
-
-function togglePlayer() {
-  player = player === 'X' ? 'O' : 'X';
-}
-
-$('#turns').html(player);
-$('.btn').click(function() {
- $(this).html(player)
-  if (this==one){
+function assignPlayerToSquare() {
+    if (this==one){
     (one).html(player)
   }
   if (this==two){
@@ -44,12 +35,20 @@ $('.btn').click(function() {
   }
    if (this==nine){
     (nine).html(player)
-  }
-  checkForWinner();
-console.log(one.html());
-console.log(two.html());
-console.log(three.html());
+  }}
 
+var player = 'X';
+
+function togglePlayer() {
+  player = player === 'X' ? 'O' : 'X';
+}
+
+$('#turns').html(player);
+$('.btn').click(function() {
+ $(this).html(player)
+ //the last line doesn't make the statement "one.html()=x/o" true. Strange...
+  assignPlayerToSquare();
+  checkForWinner();
   togglePlayer();
 
   $('#turns').html(player);

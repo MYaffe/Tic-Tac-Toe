@@ -4,7 +4,7 @@
 
 
 .span3 {
-  background:#53E05F;
+  background:#46E1F2;
   width:150px;
   height:150px;
   display:inline-block;
@@ -13,8 +13,13 @@
   box-shadow: 0 2px 5px black;
   border-radius:5px;
   overflow:hidden;
-  
 }
+
+/*#1{
+vertical-align:center;
+text-align:center;
+padding-top: 5cm;
+}*/
 
 .game-container{
   margin-top: 100px;
