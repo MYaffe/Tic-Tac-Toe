@@ -8,9 +8,12 @@ var seven = $('#7');
 var eight = $('#8');
 var nine = $('#9');
 
+
 function assignPlayerToSquare() {
+  //if (isAnswerRight=="yes"){
     if (this==one){
     (one).html(player)
+    console.log("one was clicked")
   }
   if (this==two){
     (two).html(player)
@@ -37,24 +40,10 @@ function assignPlayerToSquare() {
     (nine).html(player)
   }}
 
-var player = 'X';
 
-function togglePlayer() {
+  function togglePlayer() {
   player = player === 'X' ? 'O' : 'X';
 }
-
-$('#turns').html(player);
-$('.btn').click(function() {
- $(this).html(player)
- //the last line doesn't make the statement "one.html()=x/o" true. Strange...
-  assignPlayerToSquare();
-  checkForWinner();
-  togglePlayer();
-
-  $('#turns').html(player);
-});
-
-
 
 function checkForWinner() {
       if((one.html() === two.html() && two.html() === three.html() && one.html() !== "")||
@@ -77,7 +66,97 @@ function checkForWinner() {
     console.log('falsey');
   }}
 
+var num;
+function getRandomInt(min, max) {
+num=Math.floor(Math.random() * (max - min)) + min;
+}
 
-$('#new').click(function(){
-  $('.btn').html('');
+$('.btn').click(function() {
+        getRandomInt(1, 6);
+        if (num>0&&num<3) {
+        return myPrompt(num);
+    }
+    if (num>2&&num<7) {
+        return myPromptTwo(num);
+    }
+  });
+
+
+var isAnswerRight;
+var person;  
+var player = 'X'; 
+function myPrompt(num) {
+    person = prompt("Please enter your name", "Harry Potter");
+    if (person == "Joe") {
+        //document.getElementById("demo").innerHTML =
+       // "Hello " + person + "! How are you today?";
+        isAnswerRight="yes";
+                console.log(isAnswerRight)
+                console.log(player)
+
+            $('#turns').html(player);
+            $('.btn').click(function() {
+            $(this).html(player)
+         //the last line doesn't make the statement "one.html()=x/o" true. Strange...
+            assignPlayerToSquare();
+            checkForWinner();
+            togglePlayer();
+
+  //$('#turns').html(player);
 });
+ }
+
+        else   {
+          isAnswerRight="no"
+        console.log(isAnswerRight)
+
+        }
+    }
+
+
+var person;   
+function myPromptTwo(num) {
+    person = prompt("Please enter your name", "Mendel The Man");
+    if (person == "Moe") {
+       // document.getElementById("demo").innerHTML =
+       // "Hello " + person + "Prompt number 2? Awesome!";
+             isAnswerRight="yes";
+                     console.log(isAnswerRight)
+
+            $('#turns').html(player);
+            $('.btn').click(function() {
+            $(this).html(player)
+         //the last line doesn't make the statement "one.html()=x/o" true. Strange...
+            assignPlayerToSquare();
+            checkForWinner();
+            togglePlayer();
+
+  //$('#turns').html(player);
+});
+ 
+      }
+
+        else  {
+          isAnswerRight="no"
+        console.log(isAnswerRight)
+
+        }
+    }
+  
+
+
+
+
+
+
+/*else{
+  togglePlayer();
+}
+*/
+
+
+
+
+/*$('#new').click(function(){
+  $('.btn').html('');
+});*/
