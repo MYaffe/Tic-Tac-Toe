@@ -1,5 +1,8 @@
 
+.btn {
+  font-size: 6.5em;
 
+}
 
 h1 {
   text-align: center;
@@ -26,7 +29,9 @@ padding-top: 5cm;
 .game-container{
   margin-top: 100px;
 }
-
+.sharp {
+  border-radius:24;
+}
 .btn:hover {
   background: red;
 }
@@ -36,4 +41,11 @@ body {
    min-width: 100%;
   min-height: 100%;
 }
+#new{
+  font-size: 44px;
+  border-radius: 20px;
+}
+#turns{
+  font-size: 75px;
+  color: blue;
 }
