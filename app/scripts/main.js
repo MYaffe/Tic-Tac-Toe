@@ -85,7 +85,7 @@ function getRandomInt(min, max) {
 
 $('.btn').click(function() {
   var id = this.id;
-  var num = getRandomInt(1,2);
+  var num = getRandomInt(1,21);
   console.log(num);
 
   if (num===1) {
@@ -165,201 +165,310 @@ assignPlayerToSquare(id);
 }, {
   button_1: "119",
   button_2: "387",
-  button_3: "101",
   button_4: "70",
   button_cancel: "Nothing"
 });
 }
 
-
-// function myprompt(id) {
-//   answer = prompt("How many grooves are there on the edge of a quarter?");
-
-//   if (answer == "119") {
-//     assignPlayerToSquare(id);
-//           togglePlayer();
-//           checkForWinner();
-
-
-//$('#turns').html(player);
-//});
-  
-
-
 function myPrompt2(id) {
-    answer = prompt("What is the largest amount of American currency one can hold without having change for a dollar?");
-    if (answer == "1.19") {
-        assignPlayerToSquare(id);
-          togglePlayer();
-          checkForWinner();
- 
-      }
-    }
+        smoke.quiz("What is the largest amount of American currency one can hold without having change for a dollar?", function(e){
+  if (e == "1.19"){
+assignPlayerToSquare(id);
+      togglePlayer();
+     checkForWinner();
+  }
+}, {
+  button_1: "1.19",
+  button_2: ".79",
+  button_4: ".99",
+  button_cancel: "Nothing"
+});
+}
 
     function myPrompt3(id) {
-  answer = prompt("In Vermont, woman can't wear what without written permission from their husbands?");
-
-  if (answer == "false teeth") {
-    assignPlayerToSquare(id);
-    togglePlayer();
-    checkForWinner();
+smoke.quiz("In Vermont, woman can't wear what without written permission from their husbands?", function(e){
+  if (e == "false teeth"){
+assignPlayerToSquare(id);
+      togglePlayer();
+     checkForWinner();
   }
+}, {
+  button_1: "Chastisty belt",
+  button_2: "nothing",
+  button_3: "false teeth",
+  button_cancel: "Nothing"
+});
 }
 
  function myPrompt4(id) {
-  answer = prompt("What did people  in the Middle Ages throw at the bride and groom?");
-
-  if (answer == "eggs") {
-    assignPlayerToSquare(id);
-    togglePlayer();
-    checkForWinner();
+smoke.quiz("What did people  in the Middle Ages throw at the bride and groom?", function(e){
+  if (e == "eggs"){
+assignPlayerToSquare(id);
+      togglePlayer();
+     checkForWinner();
   }
+}, {
+  button_1: "flowers",
+  button_2: "eggs",
+  button_3: "dehydrated chicken poop",
+  button_cancel: "Nothing"
+});
 }
 
 function myPrompt5(id) {
-  answer = prompt("The color orange is named after the fruit. True or False?");
-
-  if (answer == "True") {
-    assignPlayerToSquare(id);
-    togglePlayer();
-    checkForWinner();
+smoke.quiz("The color orange is named after the fruit.", function(e){
+  if (e == "True"){
+assignPlayerToSquare(id);
+      togglePlayer();
+     checkForWinner();
   }
+}, {
+  button_1: "True",
+  button_2: "False",
+  button_cancel: "Nothing"
+});
 }
 
 function myPrompt6(id) {
-  answer = prompt("Some Turtles can breath thtough their butts. True of False?");
-
-  if (answer == "True") {
-    assignPlayerToSquare(id);
-    togglePlayer();
-    checkForWinner();
+smoke.quiz("Some Turtles can breath thtough their butts.", function(e){
+  if (e == "True"){
+assignPlayerToSquare(id);
+      togglePlayer();
+     checkForWinner();
   }
+}, {
+  button_1: "True",
+  button_2: "False",
+  button_cancel: "Nothing"
+});
 }
 function myPrompt7(id) {
-  answer = prompt("You can lead a cow downstairs but not upstairs. True or False?");
-
-  if (answer == "False") {
-    assignPlayerToSquare(id);
-    togglePlayer();
-    checkForWinner();
+smoke.quiz("Which statement is true? You can lead a cow downstairs but not upstairs. You can lead a cow upstairs but not downstairs.", function(e){
+  if (e == "A"){
+assignPlayerToSquare(id);
+      togglePlayer();
+     checkForWinner();
   }
+}, {
+  button_1: "A",
+  button_2: "B",
+  button_cancel: "Nothing"
+});
 }
+
 function myPrompt8(id) {
-  answer = prompt("What was Google's original name?");
-
-  if (answer == "Backrub") {
-    assignPlayerToSquare(id);
-    togglePlayer();
-    checkForWinner();
+smoke.quiz("What was Google's original name?", function(e){
+  if (e == "Backrub"){
+assignPlayerToSquare(id);
+      togglePlayer();
+     checkForWinner();
   }
+}, {
+  button_1: "Wackify",
+  button_2: "Backrub",
+  button_3: "2Immigrants",
+  button_cancel: "Nothing"
+});
 }
+
 function myPrompt9(id) {
-  answer = prompt("In which American city can you buy the McLobster?");
-
-  if (answer == "Cape Cod") {
-    assignPlayerToSquare(id);
-    togglePlayer();
-    checkForWinner();
+smoke.quiz("In which American city can you buy the McLobster?", function(e){
+  if (e == "Cape Cod"){
+assignPlayerToSquare(id);
+      togglePlayer();
+     checkForWinner();
   }
+}, {
+  button_1: "New Orleans",
+  button_2: "Portland",
+  button_3: "Cape Cod",
+  button_cancel: "Nothing"
+});
 }
+
 function myPrompt10(id) {
-  answer = prompt("Which mucsle in the human body is only attached at one side?");
-
-  if (answer == "Tongue") {
-    assignPlayerToSquare(id);
+smoke.prompt("Which muscle in the human body is attached at only one side?", function(e){
+  if (e=="Tongue"){
+ assignPlayerToSquare(id);
     togglePlayer();
-    checkForWinner();
+  checkForWinner();
+  }else{
+  
   }
+}, {
+  ok: "Yes",
+  cancel: "No",
+  classname: "custom-class",
+  reverseButtons: true,
+  value: "existential dread"
+});
 }
+
 function myPrompt11(id) {
-  answer = prompt("Horses fall asleep while standing. True or False?");
-
-  if (answer == "True") {
-    assignPlayerToSquare(id);
-    togglePlayer();
-    checkForWinner();
+smoke.quiz("Horses fall asleep while standing.", function(e){
+  if (e == "True"){
+assignPlayerToSquare(id);
+      togglePlayer();
+     checkForWinner();
   }
+}, {
+  button_1: "True",
+  button_2: "False",
+  button_cancel: "Nothing"
+});
 }
+
 function myPrompt12(id) {
-  answer = prompt("Which countrey has won the most World Cups?");
-
-  if (answer == "Brazil") {
-    assignPlayerToSquare(id);
-    togglePlayer();
-    checkForWinner();
+smoke.quiz("Which country has won the most World Cups?", function(e){
+  if (e == "Brazil"){
+assignPlayerToSquare(id);
+      togglePlayer();
+     checkForWinner();
   }
+}, {
+  button_1: "Germany",
+  button_2: "Argentina",
+  button_3: "Brazil",
+  button_cancel: "Nothing"
+});
 }
+
 function myPrompt13(id) {
-  answer = prompt("Which city is home to the busiest airport in the USA?");
-
-  if (answer == "Chicago") {
-    assignPlayerToSquare(id);
-    togglePlayer();
-    checkForWinner();
+smoke.quiz("What city is home to the busiest Airport in the USA", function(e){
+  if (e == "Chicago"){
+assignPlayerToSquare(id);
+      togglePlayer();
+     checkForWinner();
   }
+}, {
+  button_1: "Atlanta",
+  button_2: "Chicago",
+  button_3: "NYC",
+  button_4: "L.A",
+  button_cancel: "Nothing"
+});
 }
+
 function myPrompt14(id) {
-  answer = prompt("What name is given to half of a Byte (4 bits)??");
-
-  if (answer == "Nibble") {
-    assignPlayerToSquare(id);
+smoke.prompt("What name is given to half of a Byte (4 bits)???", function(e){
+  if (e=="Nibble"){
+ assignPlayerToSquare(id);
     togglePlayer();
-    checkForWinner();
+  checkForWinner();
+  }else{
+  
   }
+}, {
+  ok: "Yes",
+  cancel: "No",
+  classname: "custom-class",
+  reverseButtons: true,
+  value: "Come on ... Think!!"
+
+});
 }
+
+
 function myPrompt15(id) {
-  answer = prompt("What is the maximum number of times a piece of paper can be folded?");
-
-  if (answer == "Seven") {
-    assignPlayerToSquare(id);
-    togglePlayer();
-    checkForWinner();
+smoke.quiz("What is the maximum number of times a piece of paper can be folded?", function(e){
+  if (e == "Seven"){
+assignPlayerToSquare(id);
+      togglePlayer();
+     checkForWinner();
   }
+}, {
+  button_1: "Seven",
+  button_2: "Eight",
+  button_3: "Six",
+  button_cancel: "Nothing"
+});
 }
+
 function myPrompt16(id) {
-  answer = prompt("Name the animal which isn't capable of jumping?");
-
-  if (answer == "Elephant") {
-    assignPlayerToSquare(id);
+smoke.prompt("Name the animal which isn't capable of jumping?", function(e){
+  if (e=="Elephant"){
+ assignPlayerToSquare(id);
     togglePlayer();
-    checkForWinner();
+  checkForWinner();
+  }else{
+  
   }
+}, {
+  ok: "Yes",
+  cancel: "No",
+  classname: "custom-class",
+  reverseButtons: true,
+  value: "Come on ... Think!!"
+});
 }
+
 function myPrompt17(id) {
-  answer = prompt("What name is given to half of a Byte (4 bits)??");
-
-  if (answer == "Nibble") {
-    assignPlayerToSquare(id);
+smoke.prompt("What name is given to half of a Byte (4 bits)??", function(e){
+  if (e=="Nibble"){
+ assignPlayerToSquare(id);
     togglePlayer();
-    checkForWinner();
+  checkForWinner();
+  }else{
+  
   }
+}, {
+  ok: "Yes",
+  cancel: "No",
+  classname: "custom-class",
+  reverseButtons: true,
+  value: "Come on ... Think!!"
+});
 }
+
 function myPrompt18(id) {
-  answer = prompt("Does the following question have any meaning? What is the meaning of life?? ");
-
-  if (answer == "") {
-    assignPlayerToSquare(id);
+smoke.prompt("Does the following question have any meaning? What is the meaning of life???", function(e){
+  if (e=="No"){
+ assignPlayerToSquare(id);
     togglePlayer();
-    checkForWinner();
+  checkForWinner();
+  }else{
+  
   }
+}, {
+  ok: "Yes",
+  cancel: "No",
+  classname: "custom-class",
+  reverseButtons: true,
+  value: "Come on ... Think!!"
+});
 }
+
 function myPrompt19(id) {
-  answer = prompt("What's faster, to New York or by train??");
-
-  if (answer == "Pizza") {
-    assignPlayerToSquare(id);
-    togglePlayer();
-    checkForWinner();
+smoke.quiz("What's faster, to New York or by train??", function(e){
+  if (e == "Pizza"){
+assignPlayerToSquare(id);
+      togglePlayer();
+     checkForWinner();
   }
+}, {
+  button_1: "Ice Cream",
+  button_2: "Pizza",
+  button_3: "Lampoons",
+  button_cancel: "Nothing"
+});
 }
-function myPrompt20(id) {
-  answer = prompt("Who got his umbilical cord shot of by a gang shooting?");
 
-  if (answer == "Jr.") {
-    assignPlayerToSquare(id);
+function myPrompt20(id) {
+smoke.prompt("How many GA campuses exist on planet earth?", function(e){
+  if (e=="12"){
+ assignPlayerToSquare(id);
     togglePlayer();
-    checkForWinner();
+  checkForWinner();
+  }else{
+  
   }
+}, {
+  ok: "Yes",
+  cancel: "No",
+  classname: "custom-class",
+  reverseButtons: true,
+  value: "Come on ... Think!!"
+});
 }
 
 
